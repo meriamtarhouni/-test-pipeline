@@ -1,5 +1,5 @@
 from http.server import HTTPServer, BaseHTTPRequestHandler
-import psutil
+#import psutil
 import urllib.parse as urlparse
 from urllib.parse import parse_qs
 
@@ -24,7 +24,9 @@ class helloHandler(BaseHTTPRequestHandler):
             self.send_response(200)
             self.send_header('content-type','text/html')
             self.end_headers()
-            self.wfile.write(str(psutil.virtual_memory()).encode())
+            output=""
+            output+="<html><body>Memoire</body></html>"
+            self.wfile.write(output.encode())
        
        else:
             if '?' in self.path :

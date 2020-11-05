@@ -18,7 +18,7 @@ jobs:
       
       - name: Run a one-line script
         uses: actions/checkout@v2
-        run:  
+     
       
       - name: Build
         run: python3 fact_test.py

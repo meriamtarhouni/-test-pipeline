@@ -19,6 +19,8 @@ jobs:
       - name: Run a one-line script
         uses: actions/checkout@v2
      
-      
+      - name: install
+        run: apt-get install python3-psutil
+        
       - name: Build
         run: python3 fact_test.py

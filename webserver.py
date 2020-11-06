@@ -2,7 +2,7 @@ from http.server import HTTPServer, BaseHTTPRequestHandler
 #import psutil
 import urllib.parse as urlparse
 from urllib.parse import parse_qs
-
+import timeit
 
 
 
@@ -48,9 +48,12 @@ def main():
     PORT = 8080
     server = HTTPServer(('localhost',PORT),helloHandler)
     print('Server running on port %s' % PORT)
-    print(str(psutil.virtual_memory()))
+    #print(str(psutil.virtual_memory()))
     server.serve_forever()
     
 
 if __name__ == '__main__' :
+   
     main()
+    
+    

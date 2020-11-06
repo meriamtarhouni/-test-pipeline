@@ -13,6 +13,16 @@ def fact(n):
       if n==0: 
           return 1  
       return n*fact(n-1)
+
+
+def fact_Iterative(n):
+    if n<0:
+        return -1
+    x=1
+    for i in range(2,n+1):
+        x*=i
+    return x
+
     
 class helloHandler(BaseHTTPRequestHandler):
     
@@ -55,5 +65,5 @@ def main():
 if __name__ == '__main__' :
    
     main()
-    
+
     

@@ -35,6 +35,19 @@ class TestFact(unittest.TestCase):
         self.assertEqual(res, 120)
 
 
+def BenchMarkFacRecursive() :
+    setup="from webserver import fact"     
+    #The default number is 1000000
+    print (timeit.timeit("fact(120)",setup=setup,number=10))
+        
+
+def BenchMarkFacIterative() :
+    setup2="from webserver import fact_Iterative"
+    print (timeit.timeit("fact_Iterative(120)",setup=setup2,number=10)) 
+
 
 if __name__ == '__main__':
+    BenchMarkFacRecursive()
+    BenchMarkFacIterative()
     unittest.main()
+    
